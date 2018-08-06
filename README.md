@@ -1,2 +1,2 @@
-# java_ptf
+# java_pft
 Autotests on Java
