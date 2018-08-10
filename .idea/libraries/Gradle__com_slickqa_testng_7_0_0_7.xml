@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.slickqa:testng:7.0.0-7">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/sandbox/Cannot resolve external dependency com.slickqa:testng:7.0.0-7 because no repositories are defined." />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.slickqa/testng/7.0.0-7/d1f1d233bcd1931ea7e9a0d80b9a076effdaa431/testng-7.0.0-7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.slickqa/testng/7.0.0-7/a69d028231f68c7b97d8f5d860c9273d9bba1909/testng-7.0.0-7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
