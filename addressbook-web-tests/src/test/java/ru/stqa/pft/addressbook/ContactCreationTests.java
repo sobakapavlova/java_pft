@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
 
-public class newContactCreationTests {
+public class ContactCreationTests {
     FirefoxDriver wd;
     
     @BeforeMethod
@@ -21,7 +21,7 @@ public class newContactCreationTests {
     }
     
     @Test
-    public void ContactCreationTests() {
+    public void testContactCreation() {
         gotoAddNewPage();
         initAddNew();
         fillAddNewForm(new FormData("Anastasija", "Sergeevna", "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting", "Moscow, Marshala Timoshenko st.", "36", "891988854", "sobakapavlova@gmail.com", "1993", "Test"));
