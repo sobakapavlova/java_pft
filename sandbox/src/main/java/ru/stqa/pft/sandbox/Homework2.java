@@ -5,15 +5,21 @@ public class Homework2 {
     public static void main(String[] args) {
         Point p1 = new Point(4,3);
         Point p2 = new Point(1,2);
-        System.out.println("Расстояние между двумя точками (" + p1.x + "," + p1.y + ") и (" + p2.x + "," + p2.y + ") = " + p1.distance(p1,p2));
 
-        Point p3 = new Point(0,5);
-        Point p4 = new Point(6,4);
-        System.out.println("Расстояние между двумя точками (" + p3.x + "," + p3.y + ") и (" + p4.x + "," + p4.y + ") = " + p1.distance(p3,p4));
+//        Square s = new Square(5);
+//        Rectangle r = new Rectangle(4,2);
 
-        Point p5 = new Point(2,1);
-        Point p6 = new Point(1,2);
-        System.out.println("Расстояние между двумя точками (" + p5.x + "," + p5.y + ") и (" + p6.x + "," + p6.y + ") = " + p5.distance(p5,p6));
+//        System.out.println("Площадь квадрата со стороной " + s.l + " равна " + s.area());
+//        System.out.println("Площадь прямоугольника со стороной " + r.a + " и " + r.b + " равна " + r.area());
+        System.out.println("Расстояние между двумя точками (" + p1.x + "," + p1.y + ") и (" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
+
+        p1 = new Point(6,4);
+        p2 = new Point(0,0);
+        System.out.println("Расстояние между двумя точками (" + p1.x + "," + p1.y + ") и (" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
+
+        Point p3 = new Point(2,1);
+        Point p4 = new Point(1,2);
+        System.out.println("Расстояние между двумя точками (" + p3.x + "," + p3.y + ") и (" + p4.x + "," + p4.y + ") = " + p3.distance(p4));
     }
 // Создать функцию которая вычисляет расстояние между двумя точками.
 //    public static double distance(Point p1, Point p2){
