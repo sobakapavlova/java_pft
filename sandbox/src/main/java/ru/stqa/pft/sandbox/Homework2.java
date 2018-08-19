@@ -13,10 +13,6 @@ public class Homework2 {
 //        System.out.println("Площадь прямоугольника со стороной " + r.a + " и " + r.b + " равна " + r.area());
         System.out.println("Расстояние между двумя точками (" + p1.x + "," + p1.y + ") и (" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
 
-        p1 = new Point(6,4);
-        p2 = new Point(0,0);
-        System.out.println("Расстояние между двумя точками (" + p1.x + "," + p1.y + ") и (" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
-
         Point p3 = new Point(2,1);
         Point p4 = new Point(1,2);
         System.out.println("Расстояние между двумя точками (" + p3.x + "," + p3.y + ") и (" + p4.x + "," + p4.y + ") = " + p3.distance(p4));
