@@ -16,8 +16,8 @@ public class HelperBase {
     }
 
     protected void type(By locator, String text) {
-        click(By.name("submit"));
-        wd.findElement(By.name("group_name")).clear();
+        click(locator);
+        wd.findElement(locator).clear();
         wd.findElement(locator).sendKeys(text);
     }
     public boolean isAlertPresent() {
