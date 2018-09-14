@@ -41,7 +41,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public void initContactUpdate() {
-        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+        click(By.xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img"));
     }
 
     public void submitUpdateContact() {
@@ -49,12 +49,11 @@ public class ContactHelper extends HelperBase{
     }
 
     public void checkContacts() {
-        click(By.name("selected[]"));
+        click(By.xpath("//*[@id=\"3\"]"));
     }
 
     public void submitDelete() {
         click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
         wd.switchTo().alert().accept();
     }
-
 }
