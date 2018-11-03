@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.applitools:eyes-common-java3:3.37.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.applitools/eyes-common-java3/3.37.1/86c53a5f64f2e702da3029b8b8afaa74027d0caa/eyes-common-java3-3.37.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.applitools/eyes-common-java3/3.37.1/fdae4a7f62af9f531351e150e5ce726a036fd657/eyes-common-java3-3.37.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

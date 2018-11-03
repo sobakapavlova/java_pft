@@ -15,7 +15,7 @@ public class ApplicationManager {
 
 
     public void init() {
-        wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("/Applications/Firefox3.app/Contents/MacOS/firefox"));
+        wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("/Applications/Firefox.app/Contents/MacOS/firefox"));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/group.php");
         groupHelper = new GroupHelper(wd);
@@ -25,7 +25,6 @@ public class ApplicationManager {
         contactHelper = new ContactHelper(wd);
 
     }
-
     public void stop() {
         wd.quit();
     }
@@ -36,6 +35,10 @@ public class ApplicationManager {
 
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
+    }
+
+    public SessionHelper getSessionHelper() {
+        return sessionHelper;
     }
 
     public ContactHelper getContactHelper() {

@@ -11,10 +11,6 @@ public class ContactHelper extends HelperBase{
         super(wd);
     }
 
-    public void submitAddNew() {
-        click(By.xpath("//div[@id='content']/form/input[21]"));
-    }
-
     public void fillAddNewForm(FormData formData) {
         type(By.name("firstname"), formData.getFirstname());
         type(By.name("middlename"),formData.getMiddlename());
@@ -55,5 +51,24 @@ public class ContactHelper extends HelperBase{
     public void submitDelete() {
         click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
         wd.switchTo().alert().accept();
+    }
+
+    public void submitAddNew() {
+        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+    }
+
+
+    public void gotoAddNewPage() {
+        wd.findElement(By.linkText("add new")).click();
+    }
+
+    public void login(String login, String password) {
+        wd.get("http://macbook-air-3.local/addressbook/index.php");
+        wd.findElement(By.name("user")).click();
+        wd.findElement(By.name("user")).clear();
+        wd.findElement(By.name("user")).sendKeys(login);
+        wd.findElement(By.name("pass")).click();
+        wd.findElement(By.name("pass")).sendKeys(password);
+        wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
     }
 }

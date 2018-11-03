@@ -5,5 +5,5 @@ repositories {
 }
 dependencies {
     compile 'com.slickqa:testng:7.0.0-7'
-    compile 'org.seleniumhq.selenium:selenium-java:3.14.0'
+    compile 'com.applitools:eyes-selenium-java3:3.37.1'
 }
