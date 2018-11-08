@@ -1,36 +1,45 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import ru.stqa.pft.addressbook.model.FormData;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import ru.stqa.pft.addressbook.model.ContactData;
 
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
 
-    public void fillAddNewForm(FormData formData) {
-        type(By.name("firstname"), formData.getFirstname());
-        type(By.name("middlename"),formData.getMiddlename());
-        type(By.name("lastname"),formData.getSurname());
-        type(By.name("nickname"),formData.getNickname());
-        type(By.name("title"),formData.getTitle());
-        type(By.name("company"),formData.getCompany());
-        type(By.name("address"),formData.getAddress());
-        type(By.name("home"),formData.getHome());
-        type(By.name("mobile"),formData.getMobile());
-        type((By.name("email")), formData.getEmail());
+    public void fillContactForm(ContactData contactData, boolean creation) {
+        type(By.name("firstname"), contactData.getFirstname());
+        type(By.name("middlename"), contactData.getMiddlename());
+        type(By.name("lastname"), contactData.getSurname());
+        type(By.name("nickname"), contactData.getNickname());
+        type(By.name("title"), contactData.getTitle());
+        type(By.name("company"), contactData.getCompany());
+        type(By.name("address"), contactData.getAddress());
+        type(By.name("home"), contactData.getHome());
+        type(By.name("mobile"), contactData.getMobile());
+        type((By.name("email")), contactData.getEmail());
         if (!wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).isSelected()) {
             wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).click();
         }
         if (!wd.findElement(By.xpath("//div[@id='content']/form/select[2]//option[2]")).isSelected()) {
             wd.findElement(By.xpath("//div[@id='content']/form/select[2]//option[2]")).click();
         }
-        type(By.name("byear"),formData.getBirthYear());
-        type(By.name("notes"),formData.getNotes());
+        type(By.name("byear"), contactData.getBirthYear());
+        type(By.name("notes"), contactData.getNotes());
+
+        if (creation) {
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+        }
+        else Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
+
 
     public void initAddNew() {
         click(By.name("firstname"));
