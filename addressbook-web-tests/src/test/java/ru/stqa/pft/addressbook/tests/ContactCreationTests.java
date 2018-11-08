@@ -5,12 +5,6 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactCreationTests extends TestBase {
 
-//
-//    public void setUp() throws Exception {
-//        app.getSessionHelper().login("admin", "secret");
-//    }
-
-
     @Test
     public void testContactCreation() {
         app.getNavigationHelper().gotoAddNewPage();
@@ -21,9 +15,4 @@ public class ContactCreationTests extends TestBase {
                 "sobakapavlova@gmail.com", "1993", "Test", "test1"), true);
         app.getContactHelper().submitAddNew();
     }
-//
-//    public void tearDown() {
-//        app.getSessionHelper().stop();
-//    }
-
 }
