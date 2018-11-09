@@ -81,7 +81,7 @@ public class ContactData {
         return notes;
     }
 
-    public String getGroup() {
-        return group;
+    public ContactData getContact(ContactData contact) {
+        return contact;
     }
 }

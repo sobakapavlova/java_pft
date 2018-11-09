@@ -33,11 +33,6 @@ public class ContactHelper extends HelperBase {
         }
         type(By.name("byear"), contactData.getBirthYear());
         type(By.name("notes"), contactData.getNotes());
-
-        if (creation) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-        }
-        else Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
 
 
@@ -72,13 +67,13 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.linkText("add new")).click();
     }
 
-    public void login(String login, String password) {
-        wd.get("http://macbook-air-3.local/addressbook/index.php");
-        wd.findElement(By.name("user")).click();
-        wd.findElement(By.name("user")).clear();
-        wd.findElement(By.name("user")).sendKeys(login);
-        wd.findElement(By.name("pass")).click();
-        wd.findElement(By.name("pass")).sendKeys(password);
-        wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
+    public void createContact(ContactData contact, boolean b) {
+        initAddNew();
+        fillContactForm(contact, true);
+        submitAddNew();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
     }
 }
