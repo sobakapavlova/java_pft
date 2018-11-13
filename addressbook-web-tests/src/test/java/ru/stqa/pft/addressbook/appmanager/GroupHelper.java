@@ -73,7 +73,7 @@ public class GroupHelper extends HelperBase {
         for (WebElement element : elements) {
             String name = element.getText();
             String id = element.findElement(By.tagName("input")).getAttribute("value");
-            GroupData group = new GroupData(name,id, null, null);
+            GroupData group = new GroupData(name,Integer.parseInt(id), null, null);
             groups.add(group);
         }
         return groups;
