@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-public class ContactDeletingTests extends TestBase{
+public class ContactDeletingTests extends TestBase {
 
 
     @Test
-    public void testContactDeleting(){
-        if(! app.getContactHelper().isThereAContact()) {
+    public void testContactDeleting() {
+        if (!app.getContactHelper().isThereAContact()) {
             app.getContactHelper().gotoAddNewPage();
             app.getContactHelper().createContact(new ContactData("Anastasija", "Sergeevna",
                     "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",

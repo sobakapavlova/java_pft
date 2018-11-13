@@ -6,17 +6,17 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class HelperBase {
-    protected WebDriver wd;
+    WebDriver wd;
 
-    public HelperBase(WebDriver wd) {
+    HelperBase(WebDriver wd) {
         this.wd = wd;
     }
 
-    public void click(By locator) {
+    void click(By locator) {
         wd.findElement(locator).click();
     }
 
-    public void type(By locator, String text) {
+    void type(By locator, String text) {
         click(locator);
         if (text != null) {
             String existingText = wd.findElement(locator).getAttribute("value");

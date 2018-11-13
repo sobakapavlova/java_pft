@@ -16,7 +16,7 @@ public class NavigationHelper extends HelperBase {
                 isElementPresent(By.name("new"))) {
             return;
         }
-            click(By.linkText("groups"));
+        click(By.linkText("groups"));
     }
 
     public void gotoAddNewPage() {
@@ -25,7 +25,7 @@ public class NavigationHelper extends HelperBase {
 
     public void gotoHomePage() {
         if (isElementPresent(By.name("MainForm")) &&
-                isElementPresent(By.name("searchstring")))  {
+                isElementPresent(By.name("searchstring"))) {
             return;
         }
         click(By.linkText("home"));
