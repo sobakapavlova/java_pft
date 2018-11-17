@@ -16,21 +16,21 @@ public class ContactModificationTests extends TestBase {
                 "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
                 "Moscow, Marshala Timoshenko st.", "36", "891988854",
                 "sobakapavlova@gmail.com", "1993", "Test", "test1");
-        ContactData contactModificated = new ContactData("Sergey", "Anastasovich",
-                "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
-                "Moscow, Marshala Timoshenko st.", "36", "891988854",
-                "sobakapavlova@gmail.com", "1993", "Test", "test1");
+
         if (!app.getContactHelper().isThereAContact()) {
             app.getContactHelper().gotoAddNewPage();
             app.getContactHelper().createContact(contact, true);
         }
         app.getNavigationHelper().gotoHomePage();
         List<ContactData> before  = app.getContactHelper().getContactList();
-        app.getContactHelper().initContactUpdate();
-        //TODO edit contact by id
-        app.getContactHelper().fillContactForm(contact, false);
+        app.getContactHelper().initContactUpdate(before.size()-1);
+        ContactData contactModificated = new ContactData(before.get(before.size() - 1).getId(),"Sergey", "Anastasovich",
+                "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
+                "Moscow, Marshala Timoshenko st.", "36", "891988854",
+                "sobakapavlova@gmail.com", "1993", "Test", "test1");
+        app.getContactHelper().fillContactForm(contactModificated, false);
         app.getContactHelper().submitUpdateContact();
-        before.remove(contact);
+        before.remove(before.size() - 1);
         before.add(contactModificated);
         app.getNavigationHelper().gotoHomePage();
         List<ContactData> after = app.getContactHelper().getContactList();
