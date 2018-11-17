@@ -13,7 +13,7 @@ import java.util.List;
 public class ContactDeletingTests extends TestBase {
 
 
-    @Test
+    @Test (enabled = false)
     public void testContactDeleting() {
         ContactData contact = new ContactData("Anastasija", "Sergeevna",
                 "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
