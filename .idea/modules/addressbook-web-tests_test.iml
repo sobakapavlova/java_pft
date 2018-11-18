@@ -18,6 +18,8 @@
     <orderEntry type="library" name="Gradle: com.applitools:eyes-common-java3:3.37.1" level="project" />
     <orderEntry type="library" name="Gradle: io.appium:java-client:5.0.4" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:java-hamcrest:2.0.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
     <orderEntry type="library" name="Gradle: org.imgscalr:imgscalr-lib:4.2" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:3.6.0" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.connectors:jersey-apache-connector:2.16" level="project" />

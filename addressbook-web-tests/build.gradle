@@ -6,4 +6,5 @@ repositories {
 dependencies {
     compile 'com.slickqa:testng:7.0.0-7'
     compile 'com.applitools:eyes-selenium-java3:3.37.1'
+    compile 'it.ozimov:hamcrest:2.0.0'
 }
