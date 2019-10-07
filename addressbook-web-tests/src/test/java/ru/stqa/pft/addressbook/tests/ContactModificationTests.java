@@ -12,10 +12,6 @@ public class ContactModificationTests extends TestBase {
 
     @Test(enabled = true)
     public void testContactModification() {
-//        ContactData contact = new ContactData("Anastasija", "Sergeevna",
-//                "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
-//                "Moscow, Marshala Timoshenko st.", "36", "891988854",
-//                "sobakapavlova@gmail.com", "1993", "Test", "test1");
         ContactData contact = new ContactData().withFirstName("Anastasija").withMiddleName("Sergeevna")
                 .withSurname("Shchegolkova").withNickName("sobakapavlova").withTitle("Ms").withCompany("HomeTesting")
                 .withAddress("Moscow, Marshala Timoshenko st.").withHome("36").withMobilePhone("891988854")
