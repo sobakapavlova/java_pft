@@ -1,18 +1,14 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.regex.Matcher;
 
 
 public class ContactHelper extends HelperBase {
@@ -31,6 +27,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("address"), contactData.getAddress());
         type(By.name("home"), contactData.getHome());
         type((By.name("email")), contactData.getEmail());
+        attach((By.name("photo")), contactData.getPhoto());
         if (!wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).isSelected()) {
             wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).click();
         }
@@ -125,7 +122,7 @@ public class ContactHelper extends HelperBase {
         String home = wd.findElement(By.name("home")).getAttribute("value");
         String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
         String work = wd.findElement(By.name("work")).getAttribute("value");
-        wd.navigate().back();
+                wd.navigate().back();
         return new ContactData().withId(contact.getId()).withFirstName(firstName)
                 .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
     }
