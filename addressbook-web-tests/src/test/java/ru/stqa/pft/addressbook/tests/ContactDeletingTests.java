@@ -13,12 +13,13 @@ import java.util.List;
 public class ContactDeletingTests extends TestBase {
 
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void testContactDeleting() {
-        ContactData contact = new ContactData("Anastasija", "Sergeevna",
-                "Shchegolkova", "sobakapavlova", "Ms", "HomeTesting",
-                "Moscow, Marshala Timoshenko st.", "36", "891988854",
-                "sobakapavlova@gmail.com", "1993", "Test", "test1");
+        ContactData contact = new ContactData().withFirstName("Anastasija").withMiddleName("Sergeevna")
+                .withSurname("Shchegolkova").withNickName("sobakapavlova").withTitle("Ms").withCompany("HomeTesting")
+                .withAddress("Moscow, Marshala Timoshenko st.").withHome("36").withMobilePhone("891988854")
+                .withEmail("sobakapavlova@gmail.com").withbirthYear("1993")
+                .withNotes("Test").withGroup("test1");
         if (!app.getContactHelper().isThereAContact()) {
             app.getContactHelper().gotoAddNewPage();
             app.getContactHelper().createContact(contact, true);
