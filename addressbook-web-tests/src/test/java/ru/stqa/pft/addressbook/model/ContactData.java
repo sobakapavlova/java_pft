@@ -19,6 +19,13 @@ public class ContactData {
     private String homePhone;
     private String workPhone;
     private int id;
+    private String allPhones;
+
+
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
+    }
 
     public ContactData withId(int id) {
         this.id = id;
@@ -111,47 +118,6 @@ public class ContactData {
         return this;
     }
 
-
-//    public ContactData(int id, String firstname, String middlename, String surname,
-//                       String nickname, String title, String company, String address,
-//                       String home, String mobilePhone, String email, String birthYear, String Notes, String group) {
-//        this.id = id;
-//        this.firstname = firstname;
-//        this.middlename = middlename;
-//        this.surname = surname;
-//        this.nickname = nickname;
-//        this.title = title;
-//        this.company = company;
-//        this.address = address;
-//        this.home = home;
-//        this.mobilePhone = mobilePhone;
-//        this.email = email;
-//        this.birthYear = birthYear;
-//        notes = Notes;
-//        this.group = group;
-//    }
-//
-//
-//    public ContactData(String firstname, String middlename, String surname,
-//                       String nickname, String title, String company, String address,
-//                       String home, String mobilePhone, String email, String birthYear, String Notes, String group) {
-//        this.id = Integer.MAX_VALUE;
-//        this.firstname = firstname;
-//        this.middlename = middlename;
-//        this.surname = surname;
-//        this.nickname = nickname;
-//        this.title = title;
-//        this.company = company;
-//        this.address = address;
-//        this.home = home;
-//        this.mobilePhone = mobilePhone;
-//        this.email = email;
-//        this.birthYear = birthYear;
-//        notes = Notes;
-//        this.group = group;
-//    }
-
-
     public int getId() {
         return id;
     }
@@ -216,6 +182,15 @@ public class ContactData {
         return mobilePhone;
     }
 
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -241,4 +216,9 @@ public class ContactData {
     public ContactData getContact(ContactData contact) {
         return contact;
     }
+
+
+
+
+
 }

@@ -110,10 +110,9 @@ public class ContactHelper extends HelperBase {
             List<WebElement> cells = wd.findElements(By.tagName("td"));
             String firstname = cells.get(1).getText();
             String surname = cells.get(2).getText();
-            String[] phones = cells.get(5).getText().split("\n");
+            String phones = cells.get(5).getText();
             String id = row.findElement(By.tagName("input")).getAttribute("id");
-            contacts.add(new ContactData().withId(Integer.valueOf(id)).withFirstName(firstname).withSurname(surname).withHomePhone(phones[0]).
-                    withMobilePhone(phones[1]).withWorkPhone(phones[2]));
+            contacts.add(new ContactData().withId(Integer.valueOf(id)).withFirstName(firstname).withSurname(surname).withAllPhones(phones));
         }
         return contacts;
     }
